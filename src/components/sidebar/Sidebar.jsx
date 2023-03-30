@@ -10,6 +10,8 @@ import {
   School,
   WorkOutline
 } from "@mui/icons-material";
+import { Users } from "../../data";
+import CloseFriend from "../closeFriend/CloseFriend";
 
 export default function Sidebar() {
   return (
@@ -55,7 +57,11 @@ export default function Sidebar() {
         </ul>
         <button className="sidebar-button">Show More</button>
         <hr className="sidebar-hr"/>
-        <ul className="sidebar-friend-list"></ul>
+        <ul className="sidebar-friend-list">
+          {Users.map(user => (
+            <CloseFriend key={user.id} user={user}/>
+          ))}
+        </ul>
       </div>
     </div>
   );
