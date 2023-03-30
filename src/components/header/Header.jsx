@@ -9,7 +9,7 @@ export default function Header() {
       </div>
       <div className="header-center">
         <div className="searchbar">
-          <Search/>
+          <Search className="search-icon"/>
           <input placeholder="Search for friend, post or video" className="search-input"/>
         </div>
       </div>
