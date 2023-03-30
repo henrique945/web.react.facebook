@@ -1,13 +1,13 @@
 import './share.css';
 import { EmojiEmotions, Label, PermMedia, Room } from "@mui/icons-material";
 
-export default function Share() {
+export default function Share({user}) {
   return (
     <div className="share">
       <div className="share-wrapper">
         <div className="share-top">
           <img className="share-profile-img" src="/assets/person/1.jpeg" alt=""/>
-          <input placeholder="What's in your mind Henrique?" className="share-input"/>
+          <input placeholder={`What's in your mind ${user.username.split(' ')[0]}?`} className="share-input"/>
         </div>
         <hr className="share-hr"/>
         <div className="share-bottom">
